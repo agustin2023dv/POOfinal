@@ -6,6 +6,8 @@ public class EtapaMundial {
     private String descripcionEtapa;
     private ArrayList<Partido> partidos;
 
+    private int cantidad_partidos;
+
     public EtapaMundial() {
         this.descripcionEtapa= "";
         this.partidos = new ArrayList<Partido>() ;
@@ -18,7 +20,13 @@ public class EtapaMundial {
 
     public EtapaMundial(String descripcionEtapa){
         this.descripcionEtapa= descripcionEtapa;
-        this.partidos= new ArrayList<>();
+        this.partidos= new ArrayList<Partido>();
+    }
+
+    public EtapaMundial(String descripcionEtapa, int cantidad_partidos){
+        this.descripcionEtapa= descripcionEtapa;
+        this.cantidad_partidos = cantidad_partidos;
+        this.partidos= new ArrayList<Partido>(cantidad_partidos);
     }
 
 
@@ -35,8 +43,21 @@ public class EtapaMundial {
         partidos.add(partido);
     }
 
-    public List<Partido> getPartidos() {
+    public ArrayList<Partido> getPartidos() {
         return partidos;
     }
 
+    public void setPartidos(ArrayList<Partido> partidos) {
+        this.partidos = partidos;
+    }
+
+
+    public void setCantidad_partidos(int cantidad_partidos){
+
+        this.cantidad_partidos = cantidad_partidos;
+    }
+
+    public int getCantidad_partidos(){
+        return cantidad_partidos;
+    }
 }

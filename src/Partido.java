@@ -12,7 +12,17 @@ class Partido {
         this.fecha = fecha;
         this.local = local;
         this.visitante = visitante;
+        local.jugarPartido(this);
+        visitante.jugarPartido(this);
+    }
 
+    public Partido(Date fecha, Equipo local, Equipo visitante, Resultado resultado){
+        this.fecha = fecha;
+        this.local = local;
+        this.visitante = visitante;
+        this.resultado = resultado;
+        local.jugarPartido(this);
+        visitante.jugarPartido(this);
     }
 
     public Date getFecha() {
@@ -41,10 +51,12 @@ class Partido {
 
     public Resultado getResultado() {
 
+
         return resultado;
     }
 
     public void setResultado(Resultado resultado) {
+
         this.resultado = resultado;
     }
 }
