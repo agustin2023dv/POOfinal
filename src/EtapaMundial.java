@@ -60,4 +60,14 @@ public class EtapaMundial {
     public int getCantidad_partidos(){
         return cantidad_partidos;
     }
+
+    public void mostrarPartidos() {
+        for (Partido partido : partidos) {
+            System.out.println("Equipo Local: " + partido.getLocal().getNombre());
+            System.out.println("Goles del Equipo Local: " + partido.getResultado().getGolesLocal());
+            System.out.println("Equipo Visitante: " + partido.getVisitante().getNombre());
+            System.out.println("Goles del Equipo Visitante: " + partido.getResultado().getGolesVisitante());
+            System.out.println("-----------------------------");
+        }
+    }
 }
