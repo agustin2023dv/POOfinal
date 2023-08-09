@@ -13,6 +13,7 @@ class Grupo extends EtapaMundial {
     }
 
 
+    @Override
     public ArrayList<Equipo> getEquiposQueAvanzan() {
         ArrayList<Equipo> equiposQueAvanzan = new ArrayList<>(2);
         ArrayList<Equipo> equiposGrupo = new ArrayList<>(4);

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class EtapaMundial {
+public abstract class EtapaMundial {
 
     private String descripcionEtapa;
     private ArrayList<Partido> partidos;
@@ -9,26 +9,25 @@ public class EtapaMundial {
     private int cantidadPartidos;
 
     public EtapaMundial() {
-        this.descripcionEtapa= "";
-        this.partidos = new ArrayList<Partido>() ;
+        this.descripcionEtapa = "";
+        this.partidos = new ArrayList<Partido>();
     }
 
-    public EtapaMundial(String descripcionEtapa, ArrayList<Partido>partidos){
-        this.descripcionEtapa= descripcionEtapa;
-        this.partidos= partidos;
+    public EtapaMundial(String descripcionEtapa, ArrayList<Partido> partidos) {
+        this.descripcionEtapa = descripcionEtapa;
+        this.partidos = partidos;
     }
 
-    public EtapaMundial(String descripcionEtapa){
-        this.descripcionEtapa= descripcionEtapa;
-        this.partidos= new ArrayList<Partido>();
+    public EtapaMundial(String descripcionEtapa) {
+        this.descripcionEtapa = descripcionEtapa;
+        this.partidos = new ArrayList<Partido>();
     }
 
-    public EtapaMundial(String descripcionEtapa, int cantidad_partidos){
-        this.descripcionEtapa= descripcionEtapa;
+    public EtapaMundial(String descripcionEtapa, int cantidad_partidos) {
+        this.descripcionEtapa = descripcionEtapa;
         this.cantidadPartidos = cantidad_partidos;
-        this.partidos= new ArrayList<Partido>(cantidad_partidos);
+        this.partidos = new ArrayList<Partido>(cantidad_partidos);
     }
-
 
 
     public String getDescripcionEtapa() {
@@ -52,12 +51,12 @@ public class EtapaMundial {
     }
 
 
-    public void setCantidadPartidos(int cantidad_partidos){
+    public void setCantidadPartidos(int cantidad_partidos) {
 
         this.cantidadPartidos = cantidad_partidos;
     }
 
-    public int getCantidadPartidos(){
+    public int getCantidadPartidos() {
         return cantidadPartidos;
     }
 
@@ -70,4 +69,6 @@ public class EtapaMundial {
             System.out.println("-----------------------------");
         }
     }
+
+    public abstract List<Equipo> getEquiposQueAvanzan();
 }

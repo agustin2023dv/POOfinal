@@ -26,6 +26,7 @@ public class Llave extends EtapaMundial{
 
 
 
+    @Override
     public List<Equipo> getEquiposQueAvanzan() {
 
         ArrayList<Equipo> equiposQueAvanzan= new ArrayList<>();
