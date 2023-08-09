@@ -6,7 +6,7 @@ public class EtapaMundial {
     private String descripcionEtapa;
     private ArrayList<Partido> partidos;
 
-    private int cantidad_partidos;
+    private int cantidadPartidos;
 
     public EtapaMundial() {
         this.descripcionEtapa= "";
@@ -25,7 +25,7 @@ public class EtapaMundial {
 
     public EtapaMundial(String descripcionEtapa, int cantidad_partidos){
         this.descripcionEtapa= descripcionEtapa;
-        this.cantidad_partidos = cantidad_partidos;
+        this.cantidadPartidos = cantidad_partidos;
         this.partidos= new ArrayList<Partido>(cantidad_partidos);
     }
 
@@ -52,13 +52,13 @@ public class EtapaMundial {
     }
 
 
-    public void setCantidad_partidos(int cantidad_partidos){
+    public void setCantidadPartidos(int cantidad_partidos){
 
-        this.cantidad_partidos = cantidad_partidos;
+        this.cantidadPartidos = cantidad_partidos;
     }
 
-    public int getCantidad_partidos(){
-        return cantidad_partidos;
+    public int getCantidadPartidos(){
+        return cantidadPartidos;
     }
 
     public void mostrarPartidos() {

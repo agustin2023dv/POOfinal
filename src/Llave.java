@@ -3,30 +3,18 @@ import java.util.List;
 
 public class Llave extends EtapaMundial{
 
-    private String codigoLlave;
+
 
     private int cantEquiposClasifican;
 
-    public Llave (String descripcionEtapa, String codigoLlave, int cantEquiposClasifican){
+    public Llave (String descripcionEtapa,  int cantEquiposClasifican){
         super(descripcionEtapa);
-        this.codigoLlave = codigoLlave;
+
         this.cantEquiposClasifican= cantEquiposClasifican;
     }
 
-    public Llave (String descripcionEtapa, int cantidad_partidos, String codigoLlave){
-        super(descripcionEtapa, cantidad_partidos);
-        this.codigoLlave = codigoLlave;
-    }
 
 
-
-    public String getCodigoLlave() {
-        return codigoLlave;
-    }
-
-    public void setCodigoLlave(String codigoLlave) {
-        this.codigoLlave = codigoLlave;
-    }
 
     public int getCantEquiposClasifican() {
         return cantEquiposClasifican;

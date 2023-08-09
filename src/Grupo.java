@@ -9,7 +9,7 @@ class Grupo extends EtapaMundial {
     public Grupo(String descripcionEtapa, String nombre) {
         super(descripcionEtapa);
         this.nombre = nombre;
-        this.setCantidad_partidos(6);
+        this.setCantidadPartidos(6);
     }
 
 

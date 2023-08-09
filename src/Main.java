@@ -271,7 +271,7 @@ grupoBB.setPartidos(partidosGrupoB);
 
         // Llave de octavos
 
-        Llave octavos = new Llave("Octavos de final juegan 16 equipos", "Octavos", 8);
+        Llave octavos = new Llave("Octavos de final juegan 16 equipos",  8);
 
         // Partidos de 8vos
 
@@ -303,8 +303,8 @@ grupoBB.setPartidos(partidosGrupoB);
 // Cuartos de final
         ArrayList<Equipo> clasificadosCuartos = new ArrayList<>();
 
-        Llave cuartos = new Llave("Cuartos de final juegan 8 equipos", "Cuartos", 4);
-        cuartos.setCantidad_partidos(8);
+        Llave cuartos = new Llave("Cuartos de final juegan 8 equipos", 4);
+        cuartos.setCantidadPartidos(8);
 
 // Partidos 4vos de final
 
@@ -327,7 +327,7 @@ grupoBB.setPartidos(partidosGrupoB);
 
             partidos4tos.add(partido);
 
-        } while (visitanteCuartos < cuartos.getCantidad_partidos() && cuartos.getPartidos().size() < cuartos.getCantEquiposClasifican());
+        } while (visitanteCuartos < cuartos.getCantidadPartidos() && cuartos.getPartidos().size() < cuartos.getCantEquiposClasifican());
 
         cuartos.setPartidos(partidos4tos);
 
@@ -342,7 +342,7 @@ grupoBB.setPartidos(partidosGrupoB);
 
 // SEMIFINALES
 
-        Llave semis= new Llave("Semifinales juegan 4 equipos","Semis",2);
+        Llave semis= new Llave("Semifinales juegan 4 equipos",2);
 
         ArrayList<Partido> partidosSemis = new ArrayList<>();
 
@@ -374,7 +374,7 @@ semis.mostrarPartidos();
         // Partido final
 
 
-        Llave partido_final = new Llave("Final, juegan 2 equipos", "FINAL",1);
+        Llave partido_final = new Llave("Final, juegan 2 equipos", 1);
 
 
         int golesLocalFinal = new Random().nextInt(8);
